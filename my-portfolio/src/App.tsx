@@ -4,6 +4,7 @@ import Profile from "./components/Profile";
 import About from "./components/About";
 import WorkExperience from "./components/WorkExperience";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <About />
         <WorkExperience />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </div>
