@@ -22,7 +22,7 @@ const WorkExperience: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src="/images/workedOn.jpg" alt="Work Experience" className="w-80 h-auto rounded-lg shadow-lg" />
+          <img src="/images/work.jpg" alt="Work Experience" className="w-80 h-auto rounded-lg shadow-lg" />
         </motion.div>
 
         {/* Right Side - Experience Text */}
