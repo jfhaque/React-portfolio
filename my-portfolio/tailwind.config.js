@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBlue: "#001F3F",   // Navy Blue for the background
-        mediumBlue: "#003366", // Darker blue for sections
-        lightBlue: "#00AEEF",  // Light Blue for highlights and text
-        whiteText: "#F0F8FF",  // Soft white for readability
+        lightGray: "#F8F9FA",  // Light background for better contrast
+        darkBlue: "#003366",  // Dark blue for headings
+        lightBlue: "#007BFF", // Lighter blue for highlights
+        whiteText: "#333333", // Darker text for readability
       },
     },
   },

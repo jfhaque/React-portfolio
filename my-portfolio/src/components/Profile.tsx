@@ -5,7 +5,7 @@ const Profile: React.FC = () => {
   return (
     <section id="profile" className="bg-mediumBlue text-center py-16">
       <motion.img
-        src="https://via.placeholder.com/150" // Replace with your actual image
+        src="/images/profilePicture.jpg" 
         alt="Junaid Haque"
         className="w-40 h-40 rounded-full mx-auto shadow-lg border-4 border-lightBlue"
         initial={{ opacity: 0, scale: 0.5 }}
