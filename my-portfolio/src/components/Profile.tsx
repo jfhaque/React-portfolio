@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 const Profile: React.FC = () => {
   return (
-    <section id="profile" className="bg-mediumBlue text-center py-16">
+    <section id="profile" className="bg-lightBlue text-center py-16">
       <motion.img
-        src="/images/profilePicture.jpg" 
+        src="/images/profile.jpg" // Ensure this matches the filename in public/images/
         alt="Junaid Haque"
-        className="w-40 h-40 rounded-full mx-auto shadow-lg border-4 border-lightBlue"
+        className="w-40 h-40 rounded-full mx-auto shadow-lg border-4 border-darkBlue"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       />
 
       <motion.h1
-        className="text-5xl font-bold text-lightBlue mt-4"
+        className="text-5xl font-bold text-darkBlue mt-4"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -23,37 +23,13 @@ const Profile: React.FC = () => {
       </motion.h1>
 
       <motion.p
-        className="text-lg mt-4 text-gray-200 max-w-2xl mx-auto"
+        className="text-lg mt-4 text-gray-800 max-w-2xl mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
         Game Developer | AI Gameplay | Unreal & Unity Specialist
       </motion.p>
-
-      <motion.div
-        className="mt-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7, duration: 1 }}
-      >
-        <a
-          href="https://github.com/jfhaque"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-lightBlue hover:underline mx-2"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/junaid-haque/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-lightBlue hover:underline mx-2"
-        >
-          LinkedIn
-        </a>
-      </motion.div>
     </section>
   );
 };
