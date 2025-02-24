@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <section id="projects" className="bg-lightGray text-darkBlue py-16 px-6">
+    <section id="projects" className="bg-primaryBlue text-darkBlue py-16 px-6">
       <h2 className="text-4xl font-bold text-center text-darkBlue">Projects</h2>
 
       {error ? (
@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
           {repos.map((repo, index) => (
             <motion.div
               key={repo.id}
-              className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-accentBlue transform hover:scale-105 transition duration-300"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
@@ -55,9 +55,9 @@ const Projects: React.FC = () => {
                 href={repo.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline mt-4 inline-block"
+                className="text-darkBlue font-semibold hover:text-accentBlue transition"
               >
-                View on GitHub
+                View on GitHub →
               </a>
             </motion.div>
           ))}

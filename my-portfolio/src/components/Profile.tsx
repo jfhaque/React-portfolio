@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 const Profile: React.FC = () => {
   return (
-    <section id="profile" className="bg-lightBlue text-center py-16">
+    <section id="profile" className="bg-primaryBlue text-center py-32">
       <motion.img
-        src="/images/profile.jpg" // Ensure this matches the filename in public/images/
+        src={require("./images/profile.jpg")}
         alt="Junaid Haque"
-        className="w-40 h-40 rounded-full mx-auto shadow-lg border-4 border-darkBlue"
+        className="w-80 h-80 rounded-full mx-auto shadow-2xl border-8 border-accentBlue"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       />
 
       <motion.h1
-        className="text-5xl font-bold text-darkBlue mt-4"
+        className="text-7xl font-bold text-darkBlue mt-8"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -23,12 +23,14 @@ const Profile: React.FC = () => {
       </motion.h1>
 
       <motion.p
-        className="text-lg mt-4 text-gray-800 max-w-2xl mx-auto"
+        className="text-2xl mt-6 text-textDark max-w-3xl mx-auto leading-relaxed"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        Game Developer | AI Gameplay | Unreal & Unity Specialist
+        <span className="text-accentBlue font-bold">Game Developer</span> | 
+        <span className="text-darkBlue font-bold"> AI Gameplay</span> | 
+        <span className="text-accentBlue font-bold"> Unreal & Unity Specialist</span>
       </motion.p>
     </section>
   );
