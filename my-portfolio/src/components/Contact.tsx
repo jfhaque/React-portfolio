@@ -19,9 +19,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-r from-primaryBlue via-mediumBlue to-accentBlue text-darkBlue py-16 px-6">
+    <section id="contact" className="bg-blue-300 text-darkBlue min-h-[90vh] py-32 px-6 relative">
+
       <motion.h2
-        className="text-5xl font-bold text-center text-darkBlue"
+        className="text-4xl font-bold text-center text-white z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -30,19 +31,19 @@ const Contact: React.FC = () => {
       </motion.h2>
 
       <motion.form
-        className="max-w-4xl mx-auto mt-6 bg-white p-8 rounded-lg shadow-xl border-4 border-accentBlue"
+        className="max-w-4xl mx-auto mt-6 bg-white p-8 rounded-lg shadow-lg"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         onSubmit={handleSubmit}
       >
         {/* Name */}
-        <div className="mb-6">
+        <div className="mb-4">
           <label className="block text-lg font-semibold text-darkBlue">Name</label>
           <input
             type="text"
             name="name"
-            className="w-full p-3 border border-mediumBlue rounded-lg mt-1 focus:outline-none focus:ring-2 focus:ring-darkBlue"
+            className="w-full p-3 border border-gray-300 rounded-lg mt-1 text-darkBlue"
             placeholder="Enter your name"
             value={formData.name}
             onChange={handleChange}
@@ -51,12 +52,12 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Email */}
-        <div className="mb-6">
+        <div className="mb-4">
           <label className="block text-lg font-semibold text-darkBlue">Email</label>
           <input
             type="email"
             name="email"
-            className="w-full p-3 border border-accentBlue rounded-lg mt-1 focus:outline-none focus:ring-2 focus:ring-darkBlue"
+            className="w-full p-3 border border-gray-300 rounded-lg mt-1 text-darkBlue"
             placeholder="Enter your email"
             value={formData.email}
             onChange={handleChange}
@@ -65,11 +66,11 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Message */}
-        <div className="mb-6">
+        <div className="mb-4">
           <label className="block text-lg font-semibold text-darkBlue">Message</label>
           <textarea
             name="message"
-            className="w-full p-3 border border-mediumBlue rounded-lg mt-1 focus:outline-none focus:ring-2 focus:ring-darkBlue"
+            className="w-full p-3 border border-gray-300 rounded-lg mt-1 text-darkBlue"
             placeholder="Write your message..."
             rows={5}
             value={formData.message}
@@ -81,10 +82,15 @@ const Contact: React.FC = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-darkBlue text-white p-3 rounded-lg hover:bg-accentBlue transition duration-300"
+          className="w-full bg-blue-500 text-white p-3 rounded-lg transition-none opacity-100 visible"
+          style={{ backgroundColor: "#4A90E2" }}
         >
           Send Message
         </button>
+
+
+
+
       </motion.form>
     </section>
   );

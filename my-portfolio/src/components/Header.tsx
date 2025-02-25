@@ -5,16 +5,20 @@ const Header: React.FC = () => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      const offset = window.innerHeight / 2 - targetElement.clientHeight / 2; // Center the section
+      window.scrollTo({
+        top: targetElement.offsetTop - offset,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
-    <header className="bg-darkBlue text-white py-4 shadow-lg fixed w-full top-0 z-50">
-      <nav className="container mx-auto flex justify-center space-x-8 text-lg font-semibold">
+    <header className="fixed top-0 w-full z-50 bg-darkBlue py-4 shadow-lg">
+      <nav className="container mx-auto flex justify-center space-x-8 text-lg font-semibold text-white">
         <a href="#profile" onClick={(e) => handleSmoothScroll(e, "profile")} className="hover:text-accentBlue">About</a>
-        <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")} className="hover:text-accentBlue">Work Experience</a>
-        <a href="#work" onClick={(e) => handleSmoothScroll(e, "work")} className="hover:text-accentBlue">Projects</a>
+        <a href="#work" onClick={(e) => handleSmoothScroll(e, "work")} className="hover:text-accentBlue">Work Experience</a>
+        <a href="#projects" onClick={(e) => handleSmoothScroll(e, "projects")} className="hover:text-accentBlue">Projects</a>
         <a href="#contact" onClick={(e) => handleSmoothScroll(e, "contact")} className="hover:text-accentBlue">Contact</a>
       </nav>
     </header>
