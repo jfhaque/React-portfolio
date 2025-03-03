@@ -12,17 +12,33 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message Sent! (This is a placeholder action)");
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("https://formspree.io/f/mnnjzobo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Oops! Something went wrong.");
+    }
   };
 
   return (
     <section id="contact" className="bg-blue-50 text-darkBlue min-h-[90vh] py-32 px-6 relative">
-
       <motion.h2
-        className="text-4xl font-bold text-center text-blue-900 z-10"
+        className="text-4xl font-bold text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -39,11 +55,11 @@ const Contact: React.FC = () => {
       >
         {/* Name */}
         <div className="mb-4">
-          <label className="block text-lg font-semibold text-darkBlue">Name</label>
+          <label className="block text-lg font-semibold">Name</label>
           <input
             type="text"
             name="name"
-            className="w-full p-3 border border-gray-300 rounded-lg mt-1 text-darkBlue"
+            className="w-full p-3 border border-gray-300 rounded-lg mt-1"
             placeholder="Enter your name"
             value={formData.name}
             onChange={handleChange}
@@ -53,11 +69,11 @@ const Contact: React.FC = () => {
 
         {/* Email */}
         <div className="mb-4">
-          <label className="block text-lg font-semibold text-darkBlue">Email</label>
+          <label className="block text-lg font-semibold">Email</label>
           <input
             type="email"
             name="email"
-            className="w-full p-3 border border-gray-300 rounded-lg mt-1 text-darkBlue"
+            className="w-full p-3 border border-gray-300 rounded-lg mt-1"
             placeholder="Enter your email"
             value={formData.email}
             onChange={handleChange}
@@ -67,11 +83,11 @@ const Contact: React.FC = () => {
 
         {/* Message */}
         <div className="mb-4">
-          <label className="block text-lg font-semibold text-darkBlue">Message</label>
+          <label className="block text-lg font-semibold">Message</label>
           <textarea
             name="message"
-            className="w-full p-3 border border-gray-300 rounded-lg mt-1 text-darkBlue"
-            placeholder="Write your message..."
+            className="w-full p-3 border border-gray-300 rounded-lg mt-1"
+            placeholder="Write your message"
             rows={5}
             value={formData.message}
             onChange={handleChange}
@@ -82,15 +98,10 @@ const Contact: React.FC = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-3 rounded-lg transition-none opacity-100 visible"
-          style={{ backgroundColor: "#4A90E2" }}
+          className="w-full bg-darkBlue text-white p-3 rounded-lg hover:bg-lightBlue transition duration-300"
         >
           Send Message
         </button>
-
-
-
-
       </motion.form>
     </section>
   );

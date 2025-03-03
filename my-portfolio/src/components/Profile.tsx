@@ -6,8 +6,8 @@ import { Typewriter } from "react-simple-typewriter";
 import linkedInIcon from "./images/linkedin.png";
 import githubIcon from "./images/github.png";
 import emailIcon from "./images/email.png";
-import profileIcon from "./images/profile.jpg";
 import homeBackground from "./images/homeBackground.jpg";
+import programmingGif from "./images/programming.gif"
 const Profile: React.FC = () => {
   return (
     <section
@@ -26,8 +26,8 @@ const Profile: React.FC = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl font-extrabold mb-4 text-blue-900">
-          Hi, I am <span className="text-navyBlue">Junaid Haque</span>
+        <h1 className="text-4xl font-extrabold mb-4 text-blue-900">
+          Hi, I am <span className="text-navyBlue">Junaid Faizan Haque</span>
         </h1>
 
         <h2 className="text-3xl font-bold text-blue-900 mb-6">
@@ -35,8 +35,7 @@ const Profile: React.FC = () => {
             words={[
               "Game Developer",
               "AI Gameplay Programmer",
-              "Unreal & Unity Specialist",
-              "Problem Solver"
+              "Unity Specialist",
             ]}
             loop={0} // Infinite loop
             cursor
@@ -47,9 +46,11 @@ const Profile: React.FC = () => {
           />
         </h2>
 
-        <p className="text-lg font-bold mb-6">
-          Passionate Game Developer with expertise in AI-driven gameplay, animation systems,
-          and performance optimization across Unreal and Unity engines.
+        <p className="text-m font-bold mb-6">
+        I am a passionate Game Developer with over 3 years of experience specializing in AI-driven gameplay and game performance optimization.
+        With expertise in C#, C++, Unreal Engine, and Unity, I focus on creating immersive gaming experiences.
+        I have a proven track record in rapid prototyping, debugging, and refining features to enhance gameplay.
+        I thrive in collaborative environments and am dedicated to continuously improving game systems and performance to deliver top-notch player experiences.
         </p>
 
         {/* Social Links */}
@@ -91,14 +92,14 @@ const Profile: React.FC = () => {
 
       {/* Right Side - Profile Picture */}
       <motion.div
-        className="w-96 h-96 rounded-full overflow-hidden shadow-xl border-8 border-accentBlue mt-10 md:mt-0"
+        className="w-full md:w-[600px] h-auto overflow-hidden relative z-10"
         initial={{ opacity: 0, x: 100 }} // Slide in from right
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
         <img
-          src={profileIcon}
-          alt="Junaid Haque"
+          src={programmingGif} // Use your GIF as the profile image
+          alt="Profile GIF"
           className="w-full h-full object-cover"
         />
       </motion.div>

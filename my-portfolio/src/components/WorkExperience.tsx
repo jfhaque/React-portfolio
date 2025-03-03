@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const WorkExperience: React.FC = () => {
   return (
-    <section id="work" className="w-full bg-white text-white min-h-[90vh] py-32 relative">
+    <section id="work" className="w-full bg-blue-70 text-white min-h-[90vh] py-32 relative">
 
       <motion.h2
         className="text-4xl font-bold text-center text-blue-900 mb-10"
@@ -37,10 +37,15 @@ const WorkExperience: React.FC = () => {
           <div className="p-6 bg-blue-300 text-black shadow-md rounded-lg">
             <h3 className="text-2xl font-semibold">Game Developer - Carnegie Learning</h3>
             <p className="text-gray-700">May 2022 - Jan 2025 | St. John's, Canada</p>
-            <ul className="list-disc mt-2 pl-5">
-              <li>Developed and optimized AI-driven gameplay mechanics.</li>
-              <li>Improved game performance by 25% using multi-threading.</li>
-              <li>Refined animation trees for enhanced character movement.</li>
+            <ul className="list-disc mt-2 pl-5 text-sm">
+              <li>Developed and optimized robust gameplay mechanics and AI-driven systems in Unity and C++, enhancing interactive player experiences for more than 5.5 million users.
+              </li>
+              <li>Implemented gameplay features and rapid prototypes, iterating based on team and user feedback to enhance player engagement.
+              </li>
+              <li>Improved game performance by 25% through multi-threaded solutions, memory management, and asset optimization, ensuring a seamless experience across platforms.
+              </li>
+              <li>Integrated and refined animation trees, ensuring smooth character movement and gameplay mechanics.</li>
+              <li>Mentored junior developers, fostering skills in AI, gameplay, and engine optimization.</li>
             </ul>
           </div>
 
@@ -48,10 +53,12 @@ const WorkExperience: React.FC = () => {
           <div className="p-6 bg-blue-300 text-black shadow-md rounded-lg">
             <h3 className="text-2xl font-semibold">Game Development Intern - Carnegie Learning</h3>
             <p className="text-gray-700">Jan 2021 - Apr 2022 | St. John's, Canada</p>
-            <ul className="list-disc mt-2 pl-5">
-              <li>Assisted in AI development for gameplay mechanics.</li>
-              <li>Debugged AI and animation interactions.</li>
-              <li>Prototyped two game mechanics for final integration.</li>
+            <ul className="list-disc mt-2 pl-5 text-sm">
+              <li>Assisted in the development of core gameplay mechanics, including AI behavior and interactive elements.</li>
+              <li>Debugged AI and animation interactions, improving game stability and responsiveness.</li>
+              <li>Prototyped two game mechanics that were successfully integrated into the final game.</li>
+              <li>Conducted performance analysis and implemented optimizations to enhance rendering and frame rate stability.</li>
+              <li>Collaborated with cross-functional teams to ensure seamless gameplay and immersive environments.</li>
             </ul>
           </div>
         </motion.div>
