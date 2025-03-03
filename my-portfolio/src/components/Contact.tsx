@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-blue-50 text-darkBlue min-h-[90vh] py-32 px-6 relative">
+    <section id="contact" className="bg-blue-70 text-darkBlue min-h-[90vh] py-32 px-6 relative">
       <motion.h2
         className="text-4xl font-bold text-center"
         initial={{ opacity: 0 }}

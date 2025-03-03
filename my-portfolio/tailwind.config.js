@@ -9,7 +9,8 @@ export default {
         darkBlue: "#1976D2", // Dark blue for accents
         accentBlue: "#64B5F6", // Bright blue for highlights
         textDark: "#1A1A1A", // Dark gray for readability
-        navyBlue: "#000080"
+        navyBlue: "#000080",
+        lightBlue: "#c1effc"
       },
     },
   },

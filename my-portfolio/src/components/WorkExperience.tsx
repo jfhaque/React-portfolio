@@ -34,7 +34,7 @@ const WorkExperience: React.FC = () => {
           transition={{ duration: 1 }}
         >
           {/* Job 1 */}
-          <div className="p-6 bg-blue-300 text-black shadow-md rounded-lg">
+          <div className="p-6 bg-lightBlue text-black shadow-md rounded-lg">
             <h3 className="text-2xl font-semibold">Game Developer - Carnegie Learning</h3>
             <p className="text-gray-700">May 2022 - Jan 2025 | St. John's, Canada</p>
             <ul className="list-disc mt-2 pl-5 text-sm">
@@ -50,7 +50,7 @@ const WorkExperience: React.FC = () => {
           </div>
 
           {/* Job 2 */}
-          <div className="p-6 bg-blue-300 text-black shadow-md rounded-lg">
+          <div className="p-6 bg-lightBlue text-black shadow-md rounded-lg">
             <h3 className="text-2xl font-semibold">Game Development Intern - Carnegie Learning</h3>
             <p className="text-gray-700">Jan 2021 - Apr 2022 | St. John's, Canada</p>
             <ul className="list-disc mt-2 pl-5 text-sm">
