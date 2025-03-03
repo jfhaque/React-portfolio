@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           onClick={(e) => handleSmoothScroll(e, "profile")}
           className="cursor-pointer"
         >
-          <img src={myLogo} alt="Logo" className="h-auto w-[30px] object-contain" />
+          <img src={myLogo} alt="Logo" className="h-auto w-[40px] object-contain" />
         </a>
 
         {/* Navigation Links - Pushed more right */}
