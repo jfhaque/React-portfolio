@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-darkBlue py-4 shadow-lg">
+    <header className="fixed top-0 w-full z-50 bg-blue-700 py-4 shadow-lg">
       <nav className="container mx-auto flex justify-center space-x-8 text-lg font-semibold text-white">
         <a href="#profile" onClick={(e) => handleSmoothScroll(e, "profile")} className="hover:text-accentBlue">About</a>
         <a href="#work" onClick={(e) => handleSmoothScroll(e, "work")} className="hover:text-accentBlue">Work Experience</a>

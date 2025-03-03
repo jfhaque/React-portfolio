@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const WorkExperience: React.FC = () => {
   return (
-    <section id="work" className="bg-blue-300 text-white min-h-[90vh] py-32 relative">
+    <section id="work" className="w-full bg-blue-300 text-white min-h-[90vh] py-32 relative">
 
       <motion.h2
         className="text-4xl font-bold text-center mb-10"

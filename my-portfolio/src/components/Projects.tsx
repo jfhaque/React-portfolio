@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <section id="contact" className="bg-blue-100 text-darkBlue min-h-[90vh] py-32 px-6 relative">
+    <section id="projects" className="bg-blue-100 text-darkBlue min-h-[90vh] py-32 px-6 relative">
       <h2 className="text-4xl font-bold text-center text-darkBlue">Projects</h2>
 
       {error ? (

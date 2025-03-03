@@ -13,11 +13,12 @@ const App: React.FC = () => {
       <Header />
       <main className="container mx-auto px-6">
       <ParticlesBackground />
-        <Profile />
+
+      </main>
+      <Profile />
         <WorkExperience />
         <Projects />
         <Contact />
-      </main>
       <Footer />
     </div>
   );

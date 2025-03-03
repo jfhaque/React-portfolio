@@ -1,50 +1,105 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
+// Import your icons (make sure these exist in /src/images/)
+import linkedInIcon from "./images/linkedin.png";
+import githubIcon from "./images/github.png";
+import emailIcon from "./images/email.png";
+import profileIcon from "./images/profile.jpg";
+import homeBackground from "./images/homeBackground.jpg";
 const Profile: React.FC = () => {
-  const [rotate, setRotate] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { clientX, clientY } = e;
-    const x = (clientX / window.innerWidth - 0.5) * 10;
-    const y = (clientY / window.innerHeight - 0.5) * 10;
-    setRotate({ x, y });
-  };
-
   return (
-    <section id="profile" className="bg-blue-100 text-center pt-32 pb-40 relative min-h-screen">
-      {/* Profile Picture */}
+    <section
+      id="profile"
+      className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-16"
+      style={{
+        backgroundImage: `url(${homeBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}>
+      {/* Left Side - Text & Links */}
       <motion.div
-        className="w-80 h-80 rounded-full mx-auto shadow-2xl border-8 border-accentBlue"
-        animate={{ rotateX: rotate.x, rotateY: rotate.y }}
-        transition={{ type: "spring", stiffness: 100, damping: 10 }}
-        onMouseMove={handleMouseMove}
+        className="text-left max-w-2xl"
+        initial={{ opacity: 0, x: -100 }} // Slide in from left
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
       >
-        <img src={require("./images/profile.jpg")} alt="Junaid Haque" className="rounded-full w-full h-full object-cover" />
+        <h1 className="text-5xl font-extrabold mb-4 text-blue-900">
+          Hi, I am <span className="text-navyBlue">Junaid Haque</span>
+        </h1>
+
+        <h2 className="text-3xl font-bold text-blue-900 mb-6">
+          <Typewriter
+            words={[
+              "Game Developer",
+              "AI Gameplay Programmer",
+              "Unreal & Unity Specialist",
+              "Problem Solver"
+            ]}
+            loop={0} // Infinite loop
+            cursor
+            cursorStyle="_"
+            typeSpeed={50}
+            deleteSpeed={30}
+            delaySpeed={1000}
+          />
+        </h2>
+
+        <p className="text-lg font-bold mb-6">
+          Passionate Game Developer with expertise in AI-driven gameplay, animation systems,
+          and performance optimization across Unreal and Unity engines.
+        </p>
+
+        {/* Social Links */}
+        <div className="flex space-x-4 mb-6">
+          <a
+            href="https://www.linkedin.com/in/junaid-haque"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img src={linkedInIcon} alt="LinkedIn" className="w-10 h-10" />
+          </a>
+          <a
+            href="https://github.com/jfhaque"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img src={githubIcon} alt="GitHub" className="w-10 h-10" />
+          </a>
+          <a
+            href="mailto:your-email@example.com"
+            className="hover:scale-110 transition-transform"
+          >
+            <img src={emailIcon} alt="Email" className="w-10 h-10" />
+          </a>
+        </div>
+
+        {/* Download Resume Button */}
+        <a
+          href="/resume.pdf"
+          download
+          className="inline-block bg-navyBlue text-white py-3 px-6 rounded-lg text-lg font-bold hover:bg-darkBlue transition duration-300"
+        >
+          Download Resume
+        </a>
       </motion.div>
 
-      {/* Name */}
-      <motion.h1 className="text-7xl font-bold text-darkBlue mt-8">Junaid Haque</motion.h1>
-
-      {/* Job Titles */}
-      <motion.p className="text-2xl mt-6 text-darkBlue max-w-3xl mx-auto leading-relaxed">
-        Game Developer | AI Gameplay | Unreal & Unity Specialist
-      </motion.p>
-
-      {/* About Me Section */}
+      {/* Right Side - Profile Picture */}
       <motion.div
-        className="bg-blue-200 text-black mt-16 py-12 px-8 rounded-lg max-w-5xl mx-auto shadow-lg"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
+        className="w-96 h-96 rounded-full overflow-hidden shadow-xl border-8 border-accentBlue mt-10 md:mt-0"
+        initial={{ opacity: 0, x: 100 }} // Slide in from right
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-6">About Me</h2>
-        <p className="text-lg text-center">
-          I am a passionate Game Developer with 3+ years of experience in AI-driven gameplay, game design, and performance optimization.
-          Skilled in C++, Unreal Engine, and Unity, I specialize in creating immersive gaming experiences. 
-          My expertise includes gameplay systems, AI behaviors, and rapid prototyping.
-          I love solving complex problems and collaborating to create outstanding games!
-        </p>
+        <img
+          src={profileIcon}
+          alt="Junaid Haque"
+          className="w-full h-full object-cover"
+        />
       </motion.div>
     </section>
   );
