@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jfhaque.github.io/React-portfolio",
+  "homepage": "https://jfhaque.github.io",
   "dependencies": {
     "@react-three/drei": "^10.0.1",
     "@react-three/fiber": "^9.0.4",
