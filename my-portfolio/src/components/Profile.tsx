@@ -78,13 +78,14 @@ const Profile: React.FC = () => {
           </a>
         </div>
 
-        {/* Download Resume Button */}
+        {/* View Resume Button */}
         <a
           href="/resume.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-navyBlue text-white py-3 px-6 rounded-lg text-lg font-bold hover:bg-darkBlue transition duration-300"
         >
-          Download Resume
+          View Resume
         </a>
       </motion.div>
 

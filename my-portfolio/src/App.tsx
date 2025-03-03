@@ -15,11 +15,11 @@ const App: React.FC = () => {
       <ParticlesBackground />
 
       </main>
-      <Profile />
+        <Profile />
         <WorkExperience />
         <Projects />
         <Contact />
-      <Footer />
+        <Footer />
     </div>
   );
 };

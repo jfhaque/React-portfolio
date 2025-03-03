@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="bg-blue-100 text-darkBlue min-h-[90vh] py-32 px-6 relative">
-      <h2 className="text-4xl font-bold text-center text-darkBlue">Projects</h2>
+      <h2 className="text-4xl font-bold text-center text-blue-900">Projects</h2>
 
       {error ? (
         <p className="text-center text-red-600 mt-4">{error}</p>

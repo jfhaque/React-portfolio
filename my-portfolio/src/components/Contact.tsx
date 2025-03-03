@@ -19,10 +19,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-blue-300 text-darkBlue min-h-[90vh] py-32 px-6 relative">
+    <section id="contact" className="bg-blue-50 text-darkBlue min-h-[90vh] py-32 px-6 relative">
 
       <motion.h2
-        className="text-4xl font-bold text-center text-white z-10"
+        className="text-4xl font-bold text-center text-blue-900 z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
